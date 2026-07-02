@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume - Muhammad Sauqie bin Husrin</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #eef2f7;
+      color: #222;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+      display: grid;
+      grid-template-columns: 260px 1fr;
+    }
+    @media (max-width: 650px) {
+      body { padding: 0; }
+      .container {
+        grid-template-columns: 1fr;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .sidebar { padding: 28px 20px; }
+      .main { padding: 24px 20px; }
+      footer { grid-column: 1; }
+    }
+
+    .sidebar {
+      background: #1a3c5e;
+      color: #fff;
+      padding: 36px 24px;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      border: 3px solid #a8d0f0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #2c5f8a;
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .sidebar h1 {
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.4;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .sidebar-dob {
+      text-align: center;
+      font-size: 12px;
+      color: #a8d0f0;
+      margin-top: 8px;
+    }
+    .sidebar-section {
+      margin-top: 28px;
+    }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #a8d0f0;
+      border-bottom: 1px solid #2c5f8a;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+    .sidebar-item {
+      font-size: 13px;
+      color: #d0e8ff;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.5;
+    }
+    .sidebar-item .icon {
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .skill-bar-label {
+      font-size: 12px;
+      color: #d0e8ff;
+      margin-bottom: 4px;
+    }
+    .skill-bar-bg {
+      background: #2c5f8a;
+      border-radius: 10px;
+      height: 7px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      height: 100%;
+      border-radius: 10px;
+      background: #a8d0f0;
+    }
+
+    .main {
+      padding: 36px 32px;
+    }
+    .main-section {
+      margin-bottom: 26px;
+    }
+    .main-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a3c5e;
+      border-bottom: 2px solid #1a3c5e;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .profile-text {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.7;
+    }
+    .job-item {
+      margin-bottom: 18px;
+      padding-left: 14px;
+      border-left: 3px solid #a8d0f0;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .job-title {
+      font-weight: 700;
+      font-size: 15px;
+      color: #1a3c5e;
+    }
+    .job-company {
+      font-size: 13px;
+      color: #555;
+      margin-top: 2px;
+    }
+    .job-date {
+      font-size: 12px;
+      color: #fff;
+      background: #2c5f8a;
+      padding: 2px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .job-desc {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.6;
+    }
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .edu-name {
+      font-weight: 600;
+      font-size: 15px;
+      color: #1a3c5e;
+    }
+    .edu-sub {
+      font-size: 13px;
+      color: #666;
+      margin-top: 2px;
+    }
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .badge {
+      background: #e8f0f8;
+      color: #1a3c5e;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    footer {
+      grid-column: 1 / -1;
+      text-align: center;
+      font-size: 11px;
+      color: #999;
+      padding: 14px;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="avatar"><img src="WhatsApp Image 2026-07-01 at 23.56.37 (1).jpeg" alt="Muhammad Sauqie"></div>
+      <h1>Muhammad Sauqie<br>bin Husrin</h1>
+      <p class="sidebar-dob">1 Mei 2001 &bull; 24 Tahun</p>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Hubungi</div>
+        <div class="sidebar-item"><span class="icon">&#128222;</span> <strong>018-2901787</strong></div>
+        <div class="sidebar-item"><span class="icon">&#9993;</span> mohdsauqie@gmail.com</div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Lesen &amp; Kelayakan</div>
+        <div class="sidebar-item"><span class="icon">&#128663;</span> Lesen Memandu Kereta</div>
+        <div class="sidebar-item"><span class="icon">&#127949;</span> Lesen Motosikal (B2)</div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Maklumat Peribadi</div>
+        <div class="sidebar-item"><span class="icon">&#128101;</span> Anak ke-5 daripada 5 beradik</div>
+        <div class="sidebar-item"><span class="icon">&#127474;&#127486;</span> Warganegara Malaysia</div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Kemahiran</div>
+        <div class="skill-bar-label">Pembaikan &amp; Handyman</div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div>
+        <div class="skill-bar-label">Operasi</div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div>
+        <div class="skill-bar-label">Khidmat Pelanggan</div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:70%"></div></div>
+        <div class="skill-bar-label">Kerja Berpasukan</div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%"></div></div>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+      <div class="main-section">
+        <div class="main-title">Profil</div>
+        <p class="profile-text">
+          Seorang yang berdisiplin, bertanggungjawab dan teliti dalam setiap tugasan.
+          Berkeperibadian pendiam namun amat serius dalam pekerjaan.
+          Berpengalaman dalam bidang pengendalian industri dan perkhidmatan pelanggan.
+          Memiliki lesen memandu motor dan kereta, serta bersedia untuk bertugas di lokasi yang memerlukan mobiliti.
+        </p>
+      </div>
+
+      <div class="main-section">
+        <div class="main-title">Pengalaman Kerja</div>
+
+        <div class="job-item">
+          <div class="job-header">
+            <div>
+              <div class="job-title">Operator Luar</div>
+              <div class="job-company">Kosan</div>
+            </div>
+            <span class="job-date">2022 &ndash; Kini</span>
+          </div>
+          <div class="job-desc">
+            Menjalankan operasi harian di kilang termasuk memastikan jentera berjalan lancar,
+            mematuhi prosedur keselamatan, dan mencapai sasaran pengeluaran harian.
+          </div>
+        </div>
+
+        <div class="job-item">
+          <div class="job-header">
+            <div>
+              <div class="job-title">Pekerja Restoran</div>
+              <div class="job-company">Kedai Makan</div>
+            </div>
+            <span class="job-date">2020 &ndash; 2021</span>
+          </div>
+          <div class="job-desc">
+            Mengendalikan operasi harian restoran termasuk melayan pelanggan,
+            penyediaan makanan, dan menjaga kebersihan premis.
+          </div>
+        </div>
+      </div>
+
+      <div class="main-section">
+        <div class="main-title">Pendidikan</div>
+        <div class="edu-item">
+          <div>
+            <div class="edu-name">Sijil Pelajaran Malaysia (SPM)</div>
+            <div class="edu-sub">Peperiksaan Malaysia</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-section">
+        <div class="main-title">Sifat &amp; Kelebihan</div>
+        <div class="badge-list">
+          <span class="badge">&#10003; Hardworking</span>
+          <span class="badge">&#10003; Bertanggungjawab</span>
+          <span class="badge">&#10003; Berdisiplin</span>
+          <span class="badge">&#10003; Mahir Repair Peralatan</span>
+          <span class="badge">&#10003; Mobiliti Tinggi</span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Resume &mdash; Muhammad Sauqie bin Husrin
+    </footer>
+
+  </div>
+</body>
+</html>
